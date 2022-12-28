@@ -359,7 +359,7 @@ class TitleState extends MusicBeatState
 					bg.scrollFactor.set();
 					add(bg);
 		
-					(new FlxVideo(Paths.video('mx_chrims'))).finishCallback = function() {
+					 {
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
