@@ -26,12 +26,17 @@ class FlashingState extends MusicBeatState
 		warnText = new FlxText(0, 0, FlxG.width,
 			"WARNING!\n
 			This game contains flashing lights,\nloud noises and funky fresh beats.\n
-			Press ENTER to disable flashing lights.\nPress ESCAPE to ignore this message.\n
+			Press A to disable flashing lights.\nPress B to ignore this message.\n
 			Not affiliated with Nintendo.",
 			32);
 		warnText.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.RED, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
+		
+		#if android
+		addVirtualPad(NONE, A_B);
+		#end
+
 	}
 
 	override function update(elapsed:Float)
