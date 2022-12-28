@@ -3,7 +3,7 @@
 		"speed": 3,
 		"stage": "World 1...",
 		"player1": "bf-plumber-flipped",
-		"player2": "False-Hero",
+		"player2": "FalseHero",
 		"player3": null,
 		"events": [
 			[
