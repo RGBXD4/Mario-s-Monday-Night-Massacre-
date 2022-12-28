@@ -40,6 +40,10 @@ class ThanksState extends MusicBeatState
         soLong.updateHitbox();
         soLong.screenCenter(X);
         add(soLong);
+        
+        #if android
+		addVirtualPad(NONE, A);
+		#end
 
         var black:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
         add(black);
@@ -68,7 +72,7 @@ class ThanksState extends MusicBeatState
     {
         timeElapsed += elapsed;
         
-        if (FlxG.keys.pressed.ANY && canPress)
+        if (controls.ACCEPT && canPress)
         {
             canPress = false;
             FlxG.camera.visible = false;
