@@ -63,6 +63,10 @@ class CrimmasState extends MusicBeatState
             }});
         }});
 
+	 #if android
+		addVirtualPad(NONE, A_B);
+		#end
+   
         super.create();
     }
 
