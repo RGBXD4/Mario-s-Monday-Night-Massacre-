@@ -1,7 +1,7 @@
 {
 	"song": {
 		"player1": "bf-plumber-flipped",
-		"player2": "FalseHero",
+		"player2": "False-Hero",
 		"events": [],
 		"notes": [
 			{
@@ -6114,7 +6114,7 @@
 		"gfVersion": "gf-plumber",
 		"player3": "gf",
 		"splashSkin": "noteSplashes",
-		"song": "Familiar",
+		"song": "familiar",
 		"stage": "World 1...",
 		"validScore": true,
 		"arrowSkin": "NESNOTE_assets",
