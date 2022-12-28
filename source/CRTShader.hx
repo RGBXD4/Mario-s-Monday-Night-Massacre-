@@ -46,6 +46,7 @@ class CRTShader extends FlxShader
 		
         void main() 
         {
+            #pragma body
             vec2 uv = openfl_TextureCoordv;
             vec2 nuv = screenDistort(uv);
 
