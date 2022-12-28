@@ -220,6 +220,10 @@ class ResultsState extends MusicBeatState
         bf.y -= bf.height;
         add(bf);
 
+	 #if android
+		addVirtualPad(NONE, A_B);
+		#end
+			
         super.create();
     }
 
