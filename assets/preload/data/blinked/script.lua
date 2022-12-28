@@ -1,6 +1,6 @@
 local fx = 0
 function onCreatePost()
-	local location = 'misc/daiseye/'
+	local location = 'misc/Daiseye/'
     for i=1,3 do
         makeLuaSprite('eye'..i, location..'Eye'..i, 0, 0)
         scaleObject('eye'..i, 1.4, 1.4)
