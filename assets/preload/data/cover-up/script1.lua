@@ -14,7 +14,7 @@ function onCreate()
 end
 
 function onEvent(name, value1, value2)
-    if name == "SHLuigi Shooting" then		
+    if name == "script1" then		
 		--Get Dodge time
 		local dodgeTime = (crochet / 1000) * 1
 		if not (value1 == '') then
