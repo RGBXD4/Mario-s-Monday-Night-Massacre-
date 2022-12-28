@@ -92,6 +92,10 @@ class ExtrasMenu extends MusicBeatState
         add(optionSprites);
         changeSelection(0);
 
+	#if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end
+    
         super.create();
     }
 
