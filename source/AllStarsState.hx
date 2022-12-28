@@ -238,6 +238,11 @@ class AllStarsState extends MusicBeatState
 		
 		changeSelection(0, false);
 		changeDiff();
+		
+		#if android
+                addVirtualPad(LEFT_RIGHT, A_B_C);
+                #end
+		
 		super.create();
 	}
 
@@ -349,7 +354,7 @@ class AllStarsState extends MusicBeatState
 		var rightHold = controls.UI_RIGHT;
 		var accepted = controls.ACCEPT;
 		var space = FlxG.keys.justPressed.SPACE;
-		var ctrl = FlxG.keys.justPressed.CONTROL;
+		var ctrl = FlxG.keys.justPressed.CONTROL #if android || virtualPad.buttonC.justPressed #end;
 
 		var shiftMult:Int = 1;
 		if (FlxG.keys.pressed.SHIFT) shiftMult = 3;
