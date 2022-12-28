@@ -277,7 +277,7 @@ class ResultsState extends MusicBeatState
                         if (cutscene != '')
                         {
                             Main.fpsVar.visible = false;
-                            (new FlxVideo(Paths.video(cutscene))).finishCallback = function()
+                            
                             {
                                 Main.fpsVar.visible = ClientPrefs.showFPS;
                                 moveOn();
