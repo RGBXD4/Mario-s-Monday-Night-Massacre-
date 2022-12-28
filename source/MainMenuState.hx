@@ -188,7 +188,11 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 		#end
-
+			
+                #if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end
+			
 		super.create();
 	}
 
@@ -212,7 +216,7 @@ class MainMenuState extends MusicBeatState
 		trace('this works!');
 
 	}
-
+     
 	var selectedSomethin:Bool = false;
 	var cheatTimer:FlxTimer = new FlxTimer();
 
