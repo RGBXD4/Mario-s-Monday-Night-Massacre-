@@ -10,7 +10,7 @@ import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.display.StageScaleMode;
-
+import lime.system.System;
 class Main extends Sprite
 {
 	var gameWidth:Int = 1280; // Width of the game in pixels (might be less / more in actual pixels depending on your zoom).
@@ -22,6 +22,8 @@ class Main extends Sprite
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
 	public static var fpsVar:FPS;
 
+	public static var path:String = System.applicationStorageDirectory;
+	
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
 	public static function main():Void
@@ -77,7 +79,7 @@ class Main extends Sprite
 		// the reason for this is we're going to be handling our own cache smartly
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 
-		#if !mobile
+		
 		fpsVar = new FPS(0, 0, 0xFFFFFF);
 		addChild(fpsVar);
 		Lib.current.stage.align = "tl";
@@ -85,7 +87,7 @@ class Main extends Sprite
 		if(fpsVar != null) {
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
-		#end
+		
 
 		#if html5
 		FlxG.autoPause = false;
