@@ -55,6 +55,11 @@ class MarioSevenStart extends MusicBeatState
         }});
 
         FlxG.camera.setFilters([new ShaderFilter(new CRTShader(1))]);
+
+        #if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end
+			
         super.create();
     }
 
