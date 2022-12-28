@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				238,
+				211
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "idle",
+			"indices": [],
+			"name": "MX Idle Dance"
+		},
+		{
+			"offsets": [
+				344,
+				-7
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MX Note Down"
+		},
+		{
+			"offsets": [
+				275,
+				450
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singUP",
+			"indices": [],
+			"name": "MX Note Up"
+		},
+		{
+			"offsets": [
+				840,
+				499
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "Stomp",
+			"indices": [],
+			"name": "MX Note Stomp"
+		},
+		{
+			"offsets": [
+				708,
+				259
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MX Note Right"
+		},
+		{
+			"offsets": [
+				221,
+				187
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MX Note Left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/msex",
+	"position": [
+		-180,
+		-450
+	],
+	"healthicon": "mx",
+	"flip_x": true,
+	"healthbar_colors": [
+		83,
+		0,
+		0
+	],
+	"camera_position": [
+		-700,
+		-660
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

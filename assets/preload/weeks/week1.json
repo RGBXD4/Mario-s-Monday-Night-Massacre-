@@ -1,0 +1,41 @@
+{
+	"songs": [
+		[
+			"Familiar",
+			"icon-fh",
+			[
+				135,
+				52,
+				31
+			]
+		],
+		[
+			"Hero's Doom",
+			"icon-mx",
+			[
+				81,
+				9,
+				3
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "Normal",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "Mario...?",
+	"weekName": "MX Week",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

@@ -1,0 +1,429 @@
+{
+	"song": {
+		"speed": 2.2,
+		"stage": "Outlook",
+		"player1": "bf-plumber-sh",
+		"player2": "SHM",
+		"player3": null,
+		"events": [
+			[
+				4417.17791411043,
+				[
+					[
+						"SHLuigi Shooting",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				26503.0674846626,
+				[
+					[
+						"Camera Follow Pos",
+						"610",
+						"640"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"0.8"
+					]
+				]
+			],
+			[
+				27239.263803681,
+				[
+					[
+						"Camera Zoom",
+						"1.6",
+						"3, sineInOut"
+					]
+				]
+			],
+			[
+				29263.8036809816,
+				[
+					[
+						"Camera Zoom",
+						"2.5",
+						"0.2, expoIn"
+					]
+				]
+			],
+			[
+				29447.8527607362,
+				[
+					[
+						"Camera Follow Pos",
+						"700",
+						"640"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"0.2"
+					]
+				]
+			],
+			[
+				32024.5398773006,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Camera Zoom",
+						"1",
+						"0.4, sineIn"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"1"
+					],
+					[
+						"SHLuigi Shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				32300.6134969325,
+				[
+					[
+						"Change Scroll Speed",
+						"1.2",
+						".1"
+					]
+				]
+			],
+			[
+				32383.4355828221,
+				[
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"2"
+					]
+				]
+			],
+			[
+				55858.8957055214,
+				[
+					[
+						"Change Scroll Speed",
+						"1.1",
+						".1"
+					]
+				]
+			],
+			[
+				55944.0184049079,
+				[
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"2"
+					]
+				]
+			],
+			[
+				55950.9202453987,
+				[
+					[
+						"Camera Zoom",
+						"1.15",
+						".3, sineOut"
+					]
+				]
+			],
+			[
+				56319.0184049079,
+				[
+					[
+						"SHLuigi Shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				57791.4110429447,
+				[
+					[
+						"SHLuigi Shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				59263.8036809815,
+				[
+					[
+						"SHLuigi Shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				60736.1963190184,
+				[
+					[
+						"SHLuigi Shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				67638.0368098159,
+				[
+					[
+						"Change Scroll Speed",
+						"1.2",
+						".1"
+					]
+				]
+			],
+			[
+				67720.8588957055,
+				[
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"2"
+					]
+				]
+			],
+			[
+				67730.0613496932,
+				[
+					[
+						"Camera Zoom",
+						"1",
+						".3, sineIn"
+					]
+				]
+			],
+			[
+				78036.8098159508,
+				[
+					[
+						"SHLuigi Shooting",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				79502.3006134968,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					]
+				]
+			],
+			[
+				93128.8343558281,
+				[
+					[
+						"SHLuigi Shooting",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				96073.6196319017,
+				[
+					[
+						"SHLuigi Shooting",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				106748.466257669,
+				[
+					[
+						"SHLuigi Shooting",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				107484.662576687,
+				[
+					[
+						"SHLuigi Shooting",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				111901.840490797,
+				[
+					[
+						"Camera Zoom",
+						"1.1",
+						".3, sineOut"
+					]
+				]
+			],
+			[
+				112638.036809816,
+				[
+					[
+						"SHLuigi Shooting",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				113374.233128834,
+				[
+					[
+						"Camera Zoom",
+						"1.2",
+						".3, sineOut"
+					],
+					[
+						"SHLuigi Shooting",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				114846.625766871,
+				[
+					[
+						"Camera Zoom",
+						"1",
+						".3, sineOut"
+					]
+				]
+			],
+			[
+				119263.803680981,
+				[
+					[
+						"SHLuigi Shooting",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				123680.981595092,
+				[
+					[
+						"Camera Zoom",
+						"1.1",
+						".3, sineOut"
+					]
+				]
+			],
+			[
+				125153.374233129,
+				[
+					[
+						"Camera Zoom",
+						"1.2",
+						".3, sineOut"
+					]
+				]
+			],
+			[
+				126533.742331288,
+				[
+					[
+						"Change Scroll Speed",
+						"1",
+						".1"
+					]
+				]
+			],
+			[
+				126614.263803681,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"4"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"1"
+					]
+				]
+			],
+			[
+				126625.766871165,
+				[
+					[
+						"Camera Zoom",
+						"1.45",
+						".3, sineOut"
+					]
+				]
+			],
+			[
+				150184.049079754,
+				[
+					[
+						"Camera Zoom",
+						"1",
+						"1.5, sineInOut"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-plumber-sh",
+		"bpm": 163,
+		"arrowSkin": "SECRETNOTE_assets",
+		"needsVoices": true,
+		"song": "Cover Up"
+	}
+}

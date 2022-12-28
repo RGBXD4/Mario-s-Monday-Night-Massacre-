@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				132,
+				278
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Daiseye Note Down"
+		},
+		{
+			"offsets": [
+				192,
+				736
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Daiseye Note Up"
+		},
+		{
+			"offsets": [
+				235,
+				611
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Daiseye Idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				168,
+				492
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Daiseye Note Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				114,
+				545
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Daiseye Note Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Dais-eye",
+	"position": [
+		-10,
+		360
+	],
+	"healthicon": "eye",
+	"flip_x": false,
+	"healthbar_colors": [
+		145,
+		81,
+		9
+	],
+	"camera_position": [
+		-200,
+		-410
+	],
+	"sing_duration": 4,
+	"scale": 0.7
+}

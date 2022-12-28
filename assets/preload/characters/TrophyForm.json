@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				241,
+				580
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Daisy Faker Note Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				231,
+				670
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Daisy Faker Note Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				235,
+				611
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Daisy Faker Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				336,
+				618
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Daisy Faker Note Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				224,
+				612
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Daisy Faker Note Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				300,
+				760
+			],
+			"anim": "laugh",
+			"fps": 24,
+			"name": "Daiseye Anim Laugh",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/thunderthigh",
+	"position": [
+		160,
+		260
+	],
+	"healthicon": "fakeeye",
+	"flip_x": false,
+	"healthbar_colors": [
+		145,
+		81,
+		9
+	],
+	"camera_position": [
+		-270,
+		-410
+	],
+	"sing_duration": 4,
+	"scale": 0.7
+}
