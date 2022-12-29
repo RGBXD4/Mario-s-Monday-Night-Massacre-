@@ -21,13 +21,13 @@ function onCreatePost()
 	scaleObject('Iam',0.7,0.7);
 	setProperty('Iam.alpha', 0)
 
-	makeAnimatedLuaSprite('Glitch', 'misc/coronation/glitch', 820, 400);
-	addAnimationByPrefix('Glitch', 'text', 'glitch', 24, true )
-	addLuaSprite('Glitch', true);
-    setObjectCamera('Glitch','other')
-	scaleObject('Glitch',1.7 ,1.7);
-	setProperty('Glitch.alpha', 0)
-	setProperty('Glitch.antialiasing', false)
+	makeAnimatedLuaSprite('glitch', 'misc/coronation/glitch', 820, 400);
+	addAnimationByPrefix('glitch', 'text', 'glitch', 24, true )
+	addLuaSprite('glitch', true);
+    setObjectCamera('glitch','other')
+	scaleObject('glitch',1.7 ,1.7);
+	setProperty('glitch.alpha', 0)
+	setProperty('glitch.antialiasing', false)
 end
 
 function onUpdate(elapsed)
