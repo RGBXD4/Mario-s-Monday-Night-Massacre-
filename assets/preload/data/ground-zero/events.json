@@ -2,7 +2,7 @@
 	"song": {
 		"speed": 2.9,
 		"stage": "warioHall",
-		"player1": "bf64",
+		"player1": "BF64",
 		"player2": "Wario",
 		"player3": null,
 		"events": [
