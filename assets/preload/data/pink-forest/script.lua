@@ -51,11 +51,11 @@ function onStepHit()
 	if curStep == 1451 then
 		
 		doTweenAlpha('Iam', 'Iam', 1, 0.5, linear);
-		doTweenAlpha('Glitch', 'Glitch', 1, 0.5, linear);
+		doTweenAlpha('glitch', 'glitch', 1, 0.5, linear);
 end
 	if curStep == 1488 then
 		
 		setProperty('Iam.visible', false);
-		setProperty('Glitch.visible', false);
+		setProperty('glitch.visible', false);
 end
 end
