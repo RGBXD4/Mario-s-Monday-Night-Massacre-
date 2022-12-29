@@ -6801,11 +6801,11 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "tomato",
+		"player2": "MARIO",
 		"events": [],
 		"player3": "goomba",
 		"splashSkin": "noteSplashes",
-		"song": "victimized",
+		"song": "Victimized",
 		"needsVoices": true,
 		"arrowSkin": "SMWNOTE_assets",
 		"validScore": true,
