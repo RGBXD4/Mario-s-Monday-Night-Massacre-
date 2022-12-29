@@ -10,7 +10,7 @@ function onCreatePost()
 		setPropertyFromGroup('opponentStrums', i, 'x', -500)
 	end
 	setProperty('healthGain', getProperty('healthGain') * 0.5)
-	setProperty('camHUD.alpha', 0)
+	setProperty('camHUD.alpha', 1)
 end
 
 function onUpdatePost()
