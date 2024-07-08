@@ -263,9 +263,9 @@ class PauseSubState extends MusicBeatSubstate
 
 		super.update(elapsed);
 
-		var upP = closing ? false : controls.UI_UP_P;
-		var downP = closing ? false : controls.UI_DOWN_P;
-		var accepted = closing ? false : controls.ACCEPT;
+		var upP = controls.UI_UP_P;
+		var downP = controls.UI_DOWN_P;
+		var accepted = controls.ACCEPT;
 
 		if (upP) if (changeSelection(-1)) FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
 		if (downP) if (changeSelection(1)) FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
@@ -424,9 +424,9 @@ class PauseSubState extends MusicBeatSubstate
 
 			switch (swagCounter)
 			{
+				//case 0:
+					//FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
 				case 0:
-					FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
-				case 1:
 					var countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 					countdownReady.scrollFactor.set();
 					countdownReady.updateHitbox();
@@ -448,7 +448,7 @@ class PauseSubState extends MusicBeatSubstate
 					});
 
 					FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
-				case 2:
+				case 1:
 					var countdownSet = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 					countdownSet.scrollFactor.set();
 
@@ -469,7 +469,7 @@ class PauseSubState extends MusicBeatSubstate
 					});
 
 					FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
-				case 3:
+				case 2:
 					var countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 					countdownGo.scrollFactor.set();
 
@@ -491,7 +491,7 @@ class PauseSubState extends MusicBeatSubstate
 					});
 
 					FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
-				case 4:
+				case 3:
 					close();
 			}
 			swagCounter += 1;
