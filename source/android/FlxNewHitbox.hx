@@ -45,7 +45,7 @@ class FlxNewHitbox extends FlxSpriteGroup
 		}
 			
 		
-		scrollFactor.set
+		scrollFactor.set;
 	}
 
 	/**
