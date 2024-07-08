@@ -92,9 +92,7 @@ class Main extends Sprite
 		}
 
 		Generic.mode = ROOTDATA;
-		if (!FileSystem.exists(Generic.returnPath() + 'assets')) {
-			FileSystem.createDirectory(Generic.returnPath() + 'assets');
-		}
+		
 		if (!FileSystem.exists(Generic.returnPath() + 'assets/videos')) {
 			FileSystem.createDirectory(Generic.returnPath() + 'assets/videos');
 		}
