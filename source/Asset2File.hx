@@ -21,7 +21,6 @@ class Asset2File
 		if (FileSystem.exists(path + md5 + ext))
 			return path + md5 + ext;
 
-
 		File.saveBytes(path + md5 + ext, file);
 
 		return path + md5 + ext;
