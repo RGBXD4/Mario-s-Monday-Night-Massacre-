@@ -22,7 +22,11 @@ class Main extends Sprite
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
 	public static var fpsVar:FPS;
 
-	public static var path:String = System.applicationStorageDirectory;
+	// public static var path:String = System.applicationStorageDirectory;
+
+	static final losvideos:Array<String> = [
+		"",
+	];
 	
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -34,6 +38,8 @@ class Main extends Sprite
 	public function new()
 	{
 		super();
+
+		Generic.initCrashHandler();
 
 		if (stage != null)
 		{
@@ -60,15 +66,6 @@ class Main extends Sprite
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
 
-		if (zoom == -1)
-		{
-			var ratioX:Float = stageWidth / gameWidth;
-			var ratioY:Float = stageHeight / gameHeight;
-			zoom = Math.min(ratioX, ratioY);
-			gameWidth = Math.ceil(stageWidth / zoom);
-			gameHeight = Math.ceil(stageHeight / zoom);
-		}
-
 		#if !debug
 		initialState = TitleState;
 		#end
@@ -87,7 +84,18 @@ class Main extends Sprite
 		if(fpsVar != null) {
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
-		
+
+		Generic.mode = ROOTDATA;
+		if (!FileSystem.exists(Generic.returnPath() + 'assets')) {
+			FileSystem.createDirectory(Generic.returnPath() + 'assets');
+		}
+		if (!FileSystem.exists(Generic.returnPath() + 'assets/videos')) {
+			FileSystem.createDirectory(Generic.returnPath() + 'assets/videos');
+		}
+
+    for (video in losvideos) {
+		Generic.copyContent(Paths._video(video), Paths._video(video));
+    }
 
 		#if html5
 		FlxG.autoPause = false;
