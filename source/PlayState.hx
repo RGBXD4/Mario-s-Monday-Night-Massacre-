@@ -426,9 +426,6 @@ class PlayState extends MusicBeatState
 		}
 
 		var path:String = Paths.getPreloadPath('data/' + songName + '/info.txt');
-
-		
-		var modPath:String = Paths.modFolders('data/' + songName + '/info.txt');
 		
 		if(Assets.exists(path)) {
 			songAuthor = Assets.getText(path);
@@ -1261,8 +1258,8 @@ class PlayState extends MusicBeatState
 
 	#if android
 		addAndroidControls();
-	        androidControls.visible = true;
-	        #end
+		androidc.visible = false;
+		#end
 			
 		startingSong = true;
 // SONG SPECIFIC SCRIPTS
@@ -1543,6 +1540,7 @@ class PlayState extends MusicBeatState
 
 	function startCharacterLua(name:String)
 	{
+	#if LUA_ALLOWED
 		var doPush:Bool = false;
 		var luaFile:String = 'characters/' + name + '.lua';
 
@@ -1564,6 +1562,7 @@ class PlayState extends MusicBeatState
 			}
 			luaArray.push(new FunkinLua(Asset2File.getPath(luaFile)));
 		}
+	#end
 	}
 	
 	function startCharacterPos(char:Character, ?gfCheck:Bool = false) {
@@ -2070,9 +2069,8 @@ class PlayState extends MusicBeatState
 		var songName:String = Paths.formatToSongPath(SONG.song);
 		var file:String = Paths.json(songName + '/events');
 		
-		#if sys
 		if (OpenFlAssets.exists(file)) {
-		#end
+	
 			var eventsData:Array<Dynamic> = Song.loadFromJson('events', songName).events;
 			for (event in eventsData) //Event Notes
 			{
