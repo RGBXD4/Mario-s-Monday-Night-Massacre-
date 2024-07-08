@@ -27,7 +27,7 @@ class ClientPrefs {
 	public static var scoreZoom:Bool = true;
 	public static var noReset:Bool = false;
 	public static var healthBarAlpha:Float = 1;
-	public static var controllerMode:Bool = true;
+	public static var controllerMode:Bool = #if android true #else false #end;
 	public static var hitsoundVolume:Float = 0;
 	public static var pauseMusic:String = 'Tea Time';
 	public static var pauseCountdown:Bool = true;
@@ -59,6 +59,8 @@ class ClientPrefs {
 	public static var goodWindow:Int = 90;
 	public static var badWindow:Int = 135;
 	public static var safeFrames:Float = 10;
+	public static var hitboxalpha:Float = 0.2;
+	public static var hitboxmode:String = 'New';
 
 	public static var unlockedGrandDad = false;
 	public static var showedFinalCutscene = false;
@@ -119,6 +121,8 @@ class ClientPrefs {
 		FlxG.save.data.comboOffset = comboOffset;
 		FlxG.save.data.achievementsMap = Achievements.achievementsMap;
 		FlxG.save.data.henchmenDeath = Achievements.henchmenDeath;
+		FlxG.save.data.hitboxmode = hitboxmode;
+		FlxG.save.data.hitboxalpha = hitboxalpha;
 
 		FlxG.save.data.ratingOffset = ratingOffset;
 		FlxG.save.data.sickWindow = sickWindow;
@@ -187,6 +191,12 @@ class ClientPrefs {
 		}*/
 		if(FlxG.save.data.camZooms != null) {
 			camZooms = FlxG.save.data.camZooms;
+		}
+                if(FlxG.save.data.hitboxmode != null) {
+			hitboxmode = FlxG.save.data.hitboxmode;
+		}
+		if(FlxG.save.data.hitboxalpha != null) {
+			hitboxalpha = FlxG.save.data.hitboxalpha;
 		}
 		if(FlxG.save.data.hideHud != null) {
 			hideHud = FlxG.save.data.hideHud;
