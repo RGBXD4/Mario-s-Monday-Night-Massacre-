@@ -25,7 +25,11 @@ class Main extends Sprite
 	// public static var path:String = System.applicationStorageDirectory;
 
 	static final losvideos:Array<String> = [
-		"",
+		"mx_chrims",
+		"hi_comic",
+		"all_stars_cutscene_sound",
+		"Heros_Doom_Cutscene",
+		"Familiar_Cutscene",
 	];
 	
 	// You can pretty much ignore everything from here on - your code should go in your states.
