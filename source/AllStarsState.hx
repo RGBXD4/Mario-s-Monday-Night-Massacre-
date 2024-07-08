@@ -129,7 +129,7 @@ class AllStarsState extends MusicBeatState
 		}
 		WeekData.loadTheFirstEnabledMod();
 
-		bg = new FlxBackdrop(Paths.image(path + 'loopingback', 'preload'), 1, 1, true, true);
+		bg = new FlxBackdrop(Paths.image(path + 'loopingback', 'preload'));
 		bg.scrollFactor.set();
 		bg.antialiasing = false;
 		add(bg);
@@ -354,7 +354,7 @@ class AllStarsState extends MusicBeatState
 		var rightHold = controls.UI_RIGHT;
 		var accepted = controls.ACCEPT;
 		var space = FlxG.keys.justPressed.SPACE;
-		var ctrl = FlxG.keys.justPressed.CONTROL #if android || virtualPad.buttonC.justPressed #end;
+		var ctrl = FlxG.keys.justPressed.CONTROL #if android || _virtualpad.buttonC.justPressed #end;
 
 		var shiftMult:Int = 1;
 		if (FlxG.keys.pressed.SHIFT) shiftMult = 3;
