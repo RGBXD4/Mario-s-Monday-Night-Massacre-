@@ -323,15 +323,22 @@ class Paths
 	}
 
 	public static var currentTrackedSounds:Map<String, Sound> = [];
-	public static function returnSound(path:String, key:String, ?library:String) {
-		
+	public static function returnSound(path:String, key:String, ?library:String)
+	{
+	
 		// I hate this so god damn much
-		var gottenPath:String = getPath('$path/$key.$SOUND_EXT', SOUND, library);	
+		var gottenPath:String = getPath('$path/$key.$SOUND_EXT', SOUND, library);
 		gottenPath = gottenPath.substring(gottenPath.indexOf(':') + 1, gottenPath.length);
 		// trace(gottenPath);
-		if(!currentTrackedSounds.exists(gottenPath)) 
+		if (!currentTrackedSounds.exists(gottenPath))
 		
-			currentTrackedSounds.set(gottenPath, OpenFlAssets.getSound(getPath('$path/$key.$SOUND_EXT', SOUND, library)));
+			{
+				var folder:String = '';
+				if (path == 'songs')
+					folder = 'songs:';
+
+				currentTrackedSounds.set(gottenPath, OpenFlAssets.getSound(folder + getPath('$path/$key.$SOUND_EXT', SOUND, library)));
+			}
 		
 		localTrackedAssets.push(gottenPath);
 		return currentTrackedSounds.get(gottenPath);
