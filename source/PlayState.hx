@@ -1415,6 +1415,9 @@ class PlayState extends MusicBeatState
 					
 					case 'familiar':
 					startVideo('Familiar_Cutscene');
+					
+					case 'heros-doom':
+					startVideo('Heros_Doom_Cutscene');
 
 				default:
 					startCountdown();
