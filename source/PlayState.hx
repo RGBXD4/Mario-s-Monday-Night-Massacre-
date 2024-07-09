@@ -761,7 +761,10 @@ class PlayState extends MusicBeatState
 					bg.antialiasing = false;
 					add(bg);
 				}
-
+				
+			//case 'outlook':
+		//	PlayState.RGBXD4 = true;
+			
 			case 'mx': // mx week in progress
 
 				//scary
@@ -822,6 +825,9 @@ class PlayState extends MusicBeatState
 				pillar.setGraphicSize(Std.int(pillar.width * 2.6));
 				add(pillar);	
 		}
+		
+		if (Paths.formatToSongPath(SONG.song) = 'cover-up')
+			PlayState.RGBXD4 = true;
 
 		if (ClientPrefs.shaders && (stageStyle == 'nes' || stageStyle == 'n64'))
 		{
@@ -1415,9 +1421,6 @@ class PlayState extends MusicBeatState
 					
 					case 'heros-doom':
 					startVideo('Heros_Doom_Cutscene');
-					
-					case 'cover-up':
-			        PlayState.RGBXD4 = true;
 
 				default:
 					startCountdown();
