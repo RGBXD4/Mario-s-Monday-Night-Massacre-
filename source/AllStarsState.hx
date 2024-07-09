@@ -112,7 +112,7 @@ class AllStarsState extends MusicBeatState
 				}
 				else
 				{
-					if (formatName == "a-grand-ol'-time")
+					if (formatName == "a-grand-ol-time")
 					{
 						grandDadWeek = WeekData.weeksList[i];
 						if (ClientPrefs.unlockedGrandDad)
