@@ -46,7 +46,7 @@ end
 
 function onUpdate(elapsed)
     if canDodge and not botPlay then
-		if (getMouseX('camHUD') > 1150 and getMouseX('camHUD') < 1280) and (getMouseY('camHUD') > 582.5 and getMouseY('camHUD') < 720 and mousePressed('left')) or keyPressed('space') then
+		if keyJustPressed('space') and not spacePressed then -- This code is where you are successful to dodge
 			playSound('switch', 0.6)
 			setProperty('spacebar.visible', false)
 			runTimer('spaceBlinkIn', spaceFlashSpeed)
