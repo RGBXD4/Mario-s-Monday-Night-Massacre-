@@ -762,8 +762,8 @@ class PlayState extends MusicBeatState
 					add(bg);
 				}
 				
-			//case 'outlook':
-		//	PlayState.RGBXD4 = true;
+			case 'outlook':
+		   	PlayState.RGBXD4 = true;
 			
 			case 'mx': // mx week in progress
 
@@ -825,9 +825,6 @@ class PlayState extends MusicBeatState
 				pillar.setGraphicSize(Std.int(pillar.width * 2.6));
 				add(pillar);	
 		}
-		
-		if (Paths.formatToSongPath(SONG.song) = 'cover-up')
-			PlayState.RGBXD4 = true;
 
 		if (ClientPrefs.shaders && (stageStyle == 'nes' || stageStyle == 'n64'))
 		{
@@ -3798,7 +3795,6 @@ public function startVideo(name:String)
 		camZooming = false;
 		inCutscene = false;
 		updateTime = false;
-		PlayState.RGBXD4 = false;
 
 		deathCounter = 0;
 		seenCutscene = false;
@@ -3846,6 +3842,11 @@ public function startVideo(name:String)
 
 				trace('Score of ' + SONG.song + ' has been saved!');
 				#end
+			}
+			
+			if (curStage == 'outlook')
+			{
+			PlayState.RGBXD4 = false;
 			}
 
 			if (chartingMode)
