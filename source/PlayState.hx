@@ -982,7 +982,7 @@ class PlayState extends MusicBeatState
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
 				
 			case 'outlook':
-			RGBXD = true;
+			RGBXD4 = true;
 		
 		}
 
