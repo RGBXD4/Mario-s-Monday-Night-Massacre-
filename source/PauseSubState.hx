@@ -58,7 +58,7 @@ class PauseSubState extends MusicBeatSubstate
 
 	var selectTimer:Float = 0;
 	var swagCounter:Int = 0;
-	var closing:Bool = false;
+	var closing:Bool = false
 	var canPress:Bool = true;
 
 	public static var songName:String = '';
@@ -272,11 +272,11 @@ if (canPress)
 
 		if (upP) {
 		changeSelection(-1);
-//      FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
+        FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
 		}
 		if (downP) {
 		changeSelection(1);
-//		FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
+     	FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
 		}
 
 		selectLeft.x = pageSprite.x + 70 - selectLeft.width + (Math.sin(selectTimer * 7) * 3);

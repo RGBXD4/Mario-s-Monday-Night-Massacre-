@@ -761,6 +761,10 @@ class PlayState extends MusicBeatState
 					bg.antialiasing = false;
 					add(bg);
 				}
+				
+			case 'outlook':
+			PlayState.RGBXD4 = true;
+			
 			case 'mx': // mx week in progress
 
 				//scary
@@ -980,10 +984,6 @@ class PlayState extends MusicBeatState
 			case 'schoolEvil':
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069); //nice
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
-				
-			case 'Outlook':
-			RGBXD4 = true;
-		
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
@@ -3792,6 +3792,7 @@ public function startVideo(name:String)
 		camZooming = false;
 		inCutscene = false;
 		updateTime = false;
+		PlayState.RGBXD4 = false
 
 		deathCounter = 0;
 		seenCutscene = false;
