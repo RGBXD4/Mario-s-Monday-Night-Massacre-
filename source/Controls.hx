@@ -46,6 +46,7 @@ enum abstract Action(String) to String from String
 	var NOTE_RIGHT_R = "note_right-release";
 	var NOTE_DOWN_R = "note_down-release";
 	var ACCEPT = "accept";
+	var DODGE = "dodge";
 	var BACK = "back";
 	var PAUSE = "pause";
 	var RESET = "reset";
@@ -79,6 +80,7 @@ abstract Action(String) to String from String
 	var NOTE_RIGHT_R = "note_right-release";
 	var NOTE_DOWN_R = "note_down-release";
 	var ACCEPT = "accept";
+	var DODGE = "dodge";
 	var BACK = "back";
 	var PAUSE = "pause";
 	var RESET = "reset";
@@ -108,6 +110,7 @@ enum Control
 	NOTE_DOWN;
 	RESET;
 	ACCEPT;
+	DODGE;
 	BACK;
 	PAUSE;
 }
@@ -152,6 +155,7 @@ class Controls extends FlxActionSet
 	var _note_downR = new FlxActionDigital(Action.NOTE_DOWN_R);
 	var _accept = new FlxActionDigital(Action.ACCEPT);
 	var _back = new FlxActionDigital(Action.BACK);
+	var _dodge = new FlxActionDigitial(Action.DODGE);
 	var _pause = new FlxActionDigital(Action.PAUSE);
 	var _reset = new FlxActionDigital(Action.RESET);
 
@@ -289,6 +293,11 @@ class Controls extends FlxActionSet
 	inline function get_ACCEPT()
 		return _accept.check();
 
+	public var DODGE(get, never):Bool;
+
+	inline function get_DODGE()
+	return _dodge.check();
+
 	public var BACK(get, never):Bool;
 
 	inline function get_BACK()
@@ -334,6 +343,7 @@ class Controls extends FlxActionSet
 		add(_note_rightR);
 		add(_note_downR);
 		add(_accept);
+		add(_dodge);
 		add(_back);
 		add(_pause);
 		add(_reset);
@@ -373,6 +383,7 @@ class Controls extends FlxActionSet
 		add(_note_rightR);
 		add(_note_downR);
 		add(_accept);
+		add(_dodge);
 		add(_back);
 		add(_pause);
 		add(_reset);
@@ -426,6 +437,7 @@ class Controls extends FlxActionSet
 		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addButtonNOTES(action, Hitbox.buttonDown, state));
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addButtonNOTES(action, Hitbox.buttonLeft, state));
 		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addButtonNOTES(action, Hitbox.buttonRight, state));
+		inline forEachBound(Control.DODGE, (action, state) -> addButtonNOTES(action, Hitbox.buttonSpace, state));
 	}
 	
 	public function setVirtualPadUI(virtualPad:FlxVirtualPad, ?DPad:FlxDPadMode, ?Action:FlxActionMode) 
@@ -621,6 +633,7 @@ class Controls extends FlxActionSet
 			case NOTE_LEFT: _note_left;
 			case NOTE_RIGHT: _note_right;
 			case ACCEPT: _accept;
+			case DODGE: _dodge;
 			case BACK: _back;
 			case PAUSE: _pause;
 			case RESET: _reset;
@@ -677,6 +690,8 @@ class Controls extends FlxActionSet
 				func(_note_downR, JUST_RELEASED);
 			case ACCEPT:
 				func(_accept, JUST_PRESSED);
+			case DODGE:
+				func(_dodge, JUST_PRESSED);
 			case BACK:
 				func(_back, JUST_PRESSED);
 			case PAUSE:
@@ -859,6 +874,7 @@ class Controls extends FlxActionSet
 				inline bindKeys(Control.NOTE_RIGHT, keysMap.get('note_right'));
 
 				inline bindKeys(Control.ACCEPT, keysMap.get('accept'));
+				inline bindKeys(Controls.DODGE, [SPACE]);
 				inline bindKeys(Control.BACK, keysMap.get('back'));
 				inline bindKeys(Control.PAUSE, keysMap.get('pause'));
 				inline bindKeys(Control.RESET, keysMap.get('reset'));
@@ -904,6 +920,7 @@ class Controls extends FlxActionSet
 				bindKeys(Control.NOTE_LEFT, [A, FlxKey.LEFT]);
 				bindKeys(Control.NOTE_RIGHT, [D, FlxKey.RIGHT]);
 				bindKeys(Control.ACCEPT, [Z, SPACE, ENTER]);
+				bindKeys(Controls.DODGE, [SPACE, FlxKey.DODGE]);
 				bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
 				bindKeys(Control.PAUSE, [P, ENTER, ESCAPE]);
 				bindKeys(Control.RESET, [R]);
