@@ -874,7 +874,7 @@ class Controls extends FlxActionSet
 				inline bindKeys(Control.NOTE_RIGHT, keysMap.get('note_right'));
 
 				inline bindKeys(Control.ACCEPT, keysMap.get('accept'));
-				inline bindKeys(Controls.DODGE, [SPACE]);
+				inline bindKeys(Control.DODGE, [SPACE]);
 				inline bindKeys(Control.BACK, keysMap.get('back'));
 				inline bindKeys(Control.PAUSE, keysMap.get('pause'));
 				inline bindKeys(Control.RESET, keysMap.get('reset'));
@@ -920,7 +920,7 @@ class Controls extends FlxActionSet
 				bindKeys(Control.NOTE_LEFT, [A, FlxKey.LEFT]);
 				bindKeys(Control.NOTE_RIGHT, [D, FlxKey.RIGHT]);
 				bindKeys(Control.ACCEPT, [Z, SPACE, ENTER]);
-				bindKeys(Controls.DODGE, [SPACE, FlxKey.DODGE]);
+				bindKeys(Control.DODGE, [SPACE, FlxKey.DODGE]);
 				bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
 				bindKeys(Control.PAUSE, [P, ENTER, ESCAPE]);
 				bindKeys(Control.RESET, [R]);
