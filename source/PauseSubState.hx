@@ -58,7 +58,7 @@ class PauseSubState extends MusicBeatSubstate
 
 	var selectTimer:Float = 0;
 	var swagCounter:Int = 0;
-	var closing:Bool = false
+	var closing:Bool = false;
 	var canPress:Bool = true;
 
 	public static var songName:String = '';

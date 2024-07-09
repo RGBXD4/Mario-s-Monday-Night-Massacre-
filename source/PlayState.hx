@@ -3792,7 +3792,7 @@ public function startVideo(name:String)
 		camZooming = false;
 		inCutscene = false;
 		updateTime = false;
-		PlayState.RGBXD4 = false
+		PlayState.RGBXD4 = false;
 
 		deathCounter = 0;
 		seenCutscene = false;
