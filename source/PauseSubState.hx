@@ -268,12 +268,17 @@ class PauseSubState extends MusicBeatSubstate
 		var accepted = controls.ACCEPT;
 
 		if (upP) {
-		changeSelection(-1);
-		FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
+		if changeSelection(-1)
+			{	
+		         FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
+		        }
 		}
+		
 		if (downP) { 
-		changeSelection(1);
-		FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
+		if changeSelection(1)
+			{
+		         FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
+			}
 		}
 
 		selectLeft.x = pageSprite.x + 70 - selectLeft.width + (Math.sin(selectTimer * 7) * 3);
