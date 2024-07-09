@@ -155,7 +155,7 @@ class Controls extends FlxActionSet
 	var _note_downR = new FlxActionDigital(Action.NOTE_DOWN_R);
 	var _accept = new FlxActionDigital(Action.ACCEPT);
 	var _back = new FlxActionDigital(Action.BACK);
-	var _dodge = new FlxActionDigitial(Action.DODGE);
+	var _dodge = new FlxActionDigital(Action.DODGE);
 	var _pause = new FlxActionDigital(Action.PAUSE);
 	var _reset = new FlxActionDigital(Action.RESET);
 
