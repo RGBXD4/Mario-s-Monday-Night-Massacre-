@@ -58,7 +58,8 @@ class PauseSubState extends MusicBeatSubstate
 
 	var selectTimer:Float = 0;
 	var swagCounter:Int = 0;
-	var closing:Bool = false;
+	var closing:Bool = false
+	var canPress:Bool = true;
 
 	public static var songName:String = '';
 
@@ -253,6 +254,7 @@ class PauseSubState extends MusicBeatSubstate
 		
 		#if android
 		addVirtualPad(UP_DOWN, A);
+		addPadCamera();
 		#end
 	}
 
@@ -262,19 +264,19 @@ class PauseSubState extends MusicBeatSubstate
 		selectTimer += 1 * elapsed;
 
 		super.update(elapsed);
-
+if (canPress)
+{
 		var upP = controls.UI_UP_P;
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 
 		if (upP) {
-	        changeSelection(-1);
-		FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
+		changeSelection(-1) 
+//      FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
 		}
-		
 		if (downP) {
-		changeSelection(1);
-	        FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
+		changeSelection(1) 
+//		FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
 		}
 
 		selectLeft.x = pageSprite.x + 70 - selectLeft.width + (Math.sin(selectTimer * 7) * 3);
@@ -406,6 +408,7 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.resetProperties();
 					curPage = 0;
 					curSelected = 0;
+		      	}
 			}
 		}
 	}
@@ -555,41 +558,41 @@ class PauseSubState extends MusicBeatSubstate
 		arrowDown.visible = (curPage * maxItems) + maxItems < menuItemsOG.length;
 	}
 
-	function changeSelection(change:Int = 0):Bool
+	function changeSelection(change:Int = 0):Void
 	{
 		curSelected += change;
 
-		if (((curSelected + (curPage * maxItems)) >= menuItemsOG.length) || ((curSelected + (curPage * maxItems)) < 0))
-		{
-			curSelected -= change;
-			return false;
-		}
-		
+		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
+
 		if (curSelected < 0)
-		{
-			changePage(-1);
-			curSelected = maxItems - 1;
-		}
+			curSelected = menuItems.length - 1;
 		if (curSelected >= menuItems.length)
-		{
-			changePage(1);
 			curSelected = 0;
-		}
+
+		var bullShit:Int = 0;
 
 		for (item in grpMenuShit.members)
 		{
-			item.selected = item.ID == curSelected;
-			if (item.selected)
+			item.targetY = bullShit - curSelected;
+			bullShit++;
+
+			item.alpha = 0.6;
+			// item.setGraphicSize(Std.int(item.width * 0.8));
+
+			if (item.targetY == 0)
 			{
-				selectLeft.y = item.y + 5;
-				selectRight.y = item.y + 5;
-				selectTimer = 0;
+				item.alpha = 1;
+				// item.setGraphicSize(Std.int(item.width));
+
+				if (item == skipTimeTracker)
+				{
+					curTime = Math.max(0, Conductor.songPosition);
+					updateSkipTimeText();
+				}
 			}
-
 		}
-		return true;
 	}
-
+	
 	function regenMenu():Void {
 		for (i in 0...grpMenuShit.members.length) {
 			var obj = grpMenuShit.members[0];
