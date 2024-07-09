@@ -221,7 +221,7 @@ class ResultsState extends MusicBeatState
         add(bf);
 
 	 #if android
-		addVirtualPad(NONE, A_B);
+		addVirtualPad(NONE, B);
 		#end
 			
         super.create();
