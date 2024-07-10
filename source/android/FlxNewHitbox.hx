@@ -22,7 +22,7 @@ class FlxNewHitbox extends FlxSpriteGroup
 	/**
 	 * Create the zone.
 	 */
-	public function new():Void
+	public function new(mode:Modes):Void
 	{
 		super();
 
