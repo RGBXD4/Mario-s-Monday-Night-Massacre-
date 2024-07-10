@@ -312,8 +312,6 @@ class PlayState extends MusicBeatState
 	public var luaArray:Array<FunkinLua> = [];
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
 	public var introSoundsSuffix:String = '';
-	
-	public static var RGBXD4:Bool = false;
 
 	// Debug buttons
 	private var debugKeysChart:Array<FlxKey>;
@@ -761,9 +759,6 @@ class PlayState extends MusicBeatState
 					bg.antialiasing = false;
 					add(bg);
 				}
-				
-			//case 'outlook':
-		   //	PlayState.RGBXD4 = true;
 			
 			case 'mx': // mx week in progress
 
@@ -1211,12 +1206,6 @@ class PlayState extends MusicBeatState
 		botplayTxt.borderSize = botplayTxt.size / 10;
 		botplayTxt.visible = cpuControlled;
 		add(botplayTxt);
-		
-		switch (PlayState.SONG.song.toLowerCase())
-		{
-			case 'cover-up':
-				RGBXD4 = true;
-		}
 	
 	var creditTxt = new FlxText(876, 648, 348);
     creditTxt.text = "BY RGBXD4";
@@ -3849,11 +3838,6 @@ public function startVideo(name:String)
 				trace('Score of ' + SONG.song + ' has been saved!');
 				#end
 			}
-			
-		//	if (curStage == 'outlook')
-		//	{
-		//	PlayState.RGBXD4 = false;
-		//	}
 
 			if (chartingMode)
 			{
