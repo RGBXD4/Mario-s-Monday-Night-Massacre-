@@ -762,8 +762,8 @@ class PlayState extends MusicBeatState
 					add(bg);
 				}
 				
-			case 'outlook':
-		   	PlayState.RGBXD4 = true;
+			//case 'outlook':
+		   //	PlayState.RGBXD4 = true;
 			
 			case 'mx': // mx week in progress
 
@@ -1211,6 +1211,17 @@ class PlayState extends MusicBeatState
 		botplayTxt.borderSize = botplayTxt.size / 10;
 		botplayTxt.visible = cpuControlled;
 		add(botplayTxt);
+		
+		#if android
+		switch (PlayState.SONG.song.toLowerCase())
+		{
+			case 'cover-up':
+				PlayState.RGBXD4 = true;
+			
+			default:
+				PlayState.RGBXD4 = false;
+		}
+		#end
 	
 	var creditTxt = new FlxText(876, 648, 348);
     creditTxt.text = "BY RGBXD4";
@@ -3844,10 +3855,10 @@ public function startVideo(name:String)
 				#end
 			}
 			
-			if (curStage == 'outlook')
-			{
-			PlayState.RGBXD4 = false;
-			}
+		//	if (curStage == 'outlook')
+		//	{
+		//	PlayState.RGBXD4 = false;
+		//	}
 
 			if (chartingMode)
 			{
