@@ -313,7 +313,7 @@ class PlayState extends MusicBeatState
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
 	public var introSoundsSuffix:String = '';
 	
-//	public static var RGBXD4:Bool = false;
+	public static var RGBXD4:Bool = false;
 
 	// Debug buttons
 	private var debugKeysChart:Array<FlxKey>;
@@ -1212,15 +1212,11 @@ class PlayState extends MusicBeatState
 		botplayTxt.visible = cpuControlled;
 		add(botplayTxt);
 		
-		#if android
 		switch (PlayState.SONG.song.toLowerCase())
 		{
 			case 'cover-up':
-				addAndroidControls(RGBXD);
-			default:
-				addAndroidControls(DEFAULT);
+				RGBXD4 = true;
 		}
-		#end
 	
 	var creditTxt = new FlxText(876, 648, 348);
     creditTxt.text = "BY RGBXD4";
