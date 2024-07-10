@@ -313,7 +313,7 @@ class PlayState extends MusicBeatState
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
 	public var introSoundsSuffix:String = '';
 	
-	public static var RGBXD4:Bool = false;
+//	public static var RGBXD4:Bool = false;
 
 	// Debug buttons
 	private var debugKeysChart:Array<FlxKey>;
@@ -1216,10 +1216,9 @@ class PlayState extends MusicBeatState
 		switch (PlayState.SONG.song.toLowerCase())
 		{
 			case 'cover-up':
-				PlayState.RGBXD4 = true;
-			
+				addAndroidControls(RGBXD);
 			default:
-				PlayState.RGBXD4 = false;
+				addAndroidControls(DEFAULT);
 		}
 		#end
 	
@@ -1276,7 +1275,7 @@ class PlayState extends MusicBeatState
 		gameBlackLayer.cameras = [camPreHUD];
 		gameFlashLayer.cameras = [camPreHUD];
 
-	#if android
+    	#if android
 		addAndroidControls();
 		androidc.visible = false;
 		#end
@@ -1790,7 +1789,7 @@ public function startVideo(name:String)
 			if (skipCountdown || startOnTime > 0) skipArrowStartTween = true;
 			
 			#if android
-                        androidc.visible = true;
+            androidc.visible = true;
 			#end
 
 			generateStaticArrows(0);
